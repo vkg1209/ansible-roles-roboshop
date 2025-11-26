@@ -6,8 +6,5 @@
   - name: "printing the names"
     ansible.builtin.debug:
       msg: "Hello {{item}}"
-    loop: 
-    - "vinay"
-    - "rahul"
-    - "siva"
+    loop: ["vinay", "siva", "rahul"]
       
