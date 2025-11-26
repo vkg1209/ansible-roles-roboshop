@@ -1,8 +1,11 @@
-- name: "gathering facts"
+- name: "installing zip when redhat"
   hosts: "local"
   connection: "local"
   become: "yes"
   tasks: 
   - name: "printing the ansible_facts"
-    ansible.builtin.debug:
-      msg: "{{ansible_facts}}"
+    dnf:
+      name: "zip"
+      state: "present"
+    when: ansible_os_family == "RedHat"
+      
