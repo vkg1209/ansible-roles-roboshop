@@ -1,13 +1,8 @@
-- name: "Practicing if condition"
+- name: "gathering facts"
   hosts: "local"
   connection: "local"
   become: "yes"
-  vars_prompt:
-  - name: "a"
-    prompt: "Enter the number"
-    private: false
   tasks: 
-  - name: "Checking the condition"
+  - name: "printing the ansible_facts"
     ansible.builtin.debug:
-      msg: "{{a}} is less than 100"
-    when: a | int < 100
+      msg: "{{ansible_facts}}"
