@@ -3,7 +3,7 @@
   connection: "local"
   become: "yes"
   vars_files:
-    -nginx-vars.ini
+    - nginx-vars.ini
   # vars:
   #   NAME: "Vinay Kumar"
   #   ROLE: "DevOps"
@@ -23,7 +23,7 @@
   connection: "local"
   become: "yes"
   vars_files:
-    -nginx-vars.ini
+    - nginx-vars.ini
   tasks: 
     - name: "starting the nginx server"
       ansible.builtin.service: 
