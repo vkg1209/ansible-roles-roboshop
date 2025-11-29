@@ -1,7 +1,11 @@
 - name: Setting up payment server
   hosts: payment
   become: yes
-  packages: ["python3","gcc","python3-devel"] 
+  vars:
+    packages:
+      - python3
+      - gcc
+      - python3-devel
   tasks: 
 
   # Installing all the python packages
