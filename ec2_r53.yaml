@@ -26,6 +26,7 @@
       ttl: 1
       value: "{{item.instances[0].private_ip_address}}"
       wait: true
+      overwrite: true
     loop: "{{output.results}}"
 
   - name: Creating or Updating R53 Records for Frontend
@@ -37,6 +38,7 @@
       ttl: 1
       value: "{{item.instances[0].public_ip_address}}"
       wait: true
+      overwrite: true
     loop: "{{output.results}}"
     when: item.item == "frontend" 
     
