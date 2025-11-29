@@ -10,14 +10,13 @@
   tasks: 
   - name: Creating EC2 Instances
     amazon.aws.ec2_instance:
-      # name: "{{item}}"
-      name: "catalogue"
+      name: "{{item}}"
       instance_type: "{{instance_type}}"
       security_group: "{{security_group}}"
       image_id: "{{image_id}}"
       region: "{{region}}"
     register: output
-    # loop: "{{INSTANCES}}"
+    loop: "{{INSTANCES}}"
   
   - name: print output
     ansible.builtin.debug:
