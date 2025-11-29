@@ -75,6 +75,12 @@
       src: ./shipping.service
       dest: /etc/systemd/system/shipping.service
 
+  # installing mysql client
+  - name: Install MySQL client
+    ansible.builtin.package:
+      name: mysql
+      state: present
+
   # loading the shipping data into mysql server
   - name: import shipping data into mysql
     community.mysql.mysql_db:
