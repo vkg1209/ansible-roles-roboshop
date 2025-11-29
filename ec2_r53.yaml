@@ -6,6 +6,7 @@
     instance_type: t3.micro
     security_group: sg-03c4d065bf7f7f94d
     image_id: ami-09c813fb71547fc4f
+    region: us-east-1
   tasks: 
   - name: Creating EC2 Instances
     amazon.aws.ec2_instance:
@@ -13,6 +14,7 @@
       instance_type: "{{instance_type}}"
       security_group: "{{security_group}}"
       image_id: "{{image_id}}"
+      region: "{{region}}"
     register: output
     loop: "{{INSTANCES}}"
   
