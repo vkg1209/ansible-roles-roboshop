@@ -4,11 +4,11 @@
   tasks:
   - name: install mysql python libraries
     ansible.builtin.pip:
-    executable: pip3.9
-    name: "{{ item }}"
-    loop:
-    - cryptography
-    - PyMySQL
+      executable: pip3.9
+      name: "{{ item }}"
+      loop:
+      - cryptography
+      - PyMySQL
 
   # installing maven
   - name: installing maven package
