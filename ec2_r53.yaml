@@ -13,7 +13,6 @@
       instance_type: "{{instance_type}}"
       security_group: "{{security_group}}"
       image_id: "{{image_id}}"
-      region: "us-east-1"
     register: output
     loop: "{{INSTANCES}}"
   
