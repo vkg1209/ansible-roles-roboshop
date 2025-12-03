@@ -1,4 +1,4 @@
-- name: Setting up user server
+- name: Configuring user server
   hosts: user
   become: yes
   tasks: 
