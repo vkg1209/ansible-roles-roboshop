@@ -8,7 +8,7 @@
     - PyMySQL
 
 - name: app setup
-  ansible.builtin.import:
+  ansible.builtin.import_role:
     name: common
     tasks_from: app-setup.yaml
 
