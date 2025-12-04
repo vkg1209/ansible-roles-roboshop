@@ -36,7 +36,7 @@
     path: /etc/nginx/nginx.conf
 
 - name: copying nginx conf
-  ansible.builtin.copy:
+  ansible.builtin.template:
     src: nginx.conf
     dest: /etc/nginx/nginx.conf
   notify: restart nginx
